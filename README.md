@@ -4,6 +4,10 @@
 
 This is a decentralized application (DApp) built with [Hardhat](https://hardhat.org/) and [Solidity](https://solidity.readthedocs.io/). It is deployed on the [Goerli testnet](https://goerli.net/) and uses [Alchemy](https://alchemyapi.io/) as its node, as well as the Alchemy API for interacting with the Ethereum network.
 
+[Demo Version (Work on Goerli testnet)](https://buymeacoffee-solidity-defi-tipping-app.chefleo.repl.co/)
+
+[Front end code](https://replit.com/@chefleo/BuyMeACoffee-Solidity-DeFi-Tipping-app)
+
 ## Prerequisites
 
 To use this project, you will need to install:
