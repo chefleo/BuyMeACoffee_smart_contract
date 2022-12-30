@@ -1,8 +1,6 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.9;
 
-// Deployed to Goerli at 0xe3563124ca1A7f77B934534782E1d7AdbA7B9b97
-
 contract BuyMeACoffee {
     // Event to emit when the Memo is created
     event NewMemo(
@@ -57,7 +55,7 @@ contract BuyMeACoffee {
     /**
      * @dev retrieve all the memos received and stored on the blockchain
      */
-    function getMemo() public view returns (Memo[] memory) {
+    function getMemos() public view returns (Memo[] memory) {
         return memos;
     }
 }

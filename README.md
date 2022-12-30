@@ -8,7 +8,7 @@ This is a decentralized application (DApp) built with [Hardhat](https://hardhat.
 
 [Front end code](https://replit.com/@chefleo/BuyMeACoffee-Solidity-DeFi-Tipping-app)
 
-Contract Address -> [0xe3563124ca1A7f77B934534782E1d7AdbA7B9b97](https://goerli.etherscan.io/address/0xe3563124ca1a7f77b934534782e1d7adba7b9b97)
+Contract Address -> [0x3eFb409C56306b82d2B59eef266B1067678f5CdA](https://goerli.etherscan.io/address/0x3eFb409C56306b82d2B59eef266B1067678f5CdA)
 
 ## Prerequisites
 
