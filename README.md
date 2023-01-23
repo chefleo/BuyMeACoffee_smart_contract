@@ -84,17 +84,29 @@ This smart contract allows users to send ether (ETH) to the contract, along with
 ## Features
 
 - Emits an event `NewMemo` when a user buys a coffee, which includes information about the transaction (from address, timestamp, name, and message)
+
 ![Event](./image/event.png)
+
 ![Function](./image/func_buycoffee.png)
+
 ![Transaction](./image/Transaction_log.png)
+
 - Stores an array of `Memos` that are received from users
+
 ![Array memos](./image/Arr_memos.png)
+
 - Has a variable `owner` that stores the address of the contract deployer
+
 ![Owner](./image/owner.png)
+
 ![Owner](./image/constructor.png)
+
 - Allows the `contract owner` to withdraw all the ether that is stored in the contract
+
 ![Withdraw](./image/withdraw.png)
+
 - Allows anyone to retrieve all the memos stored in the contract.
+
 ![GetMemos](./image/getMemos.png)
 
 ## Structs
