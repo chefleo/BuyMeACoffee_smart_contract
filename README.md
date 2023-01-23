@@ -85,29 +85,64 @@ This smart contract allows users to send ether (ETH) to the contract, along with
 
 - Emits an event `NewMemo` when a user buys a coffee, which includes information about the transaction (from address, timestamp, name, and message)
 
-![Event](./image/event.png)
+```solidity
+event NewMemo(
+    address indexed from,
+    uint256 timestamp,
+    string name,
+    string message
+  );
+```
 
-![Function](./image/func_buycoffee.png)
+```solidity
+function buyCoffee(
+    string memory _name,
+    string memory _message
+  ) public payable {
+    require(msg.value > 0, "Can't buy coffee with 0 eth");
+
+    memos.push(Memo(msg.sender, block.timestamp, _name, _message));
+
+    // Emit a log event when a new memo is created
+    emit NewMemo(msg.sender, block.timestamp, _name, _message);
+  }
+```
 
 ![Transaction](./image/Transaction_log.png)
 
 - Stores an array of `Memos` that are received from users
 
-![Array memos](./image/Arr_memos.png)
+```solidity
+Memo[] memos;
+```
 
 - Has a variable `owner` that stores the address of the contract deployer
 
-![Owner](./image/owner.png)
+```solidity
+// Address of contract deployer
+  address payable owner;
 
-![Owner](./image/constructor.png)
+// Deploy logic
+constructor() {
+  owner = payable(msg.sender);
+  }
+```
 
 - Allows the `contract owner` to withdraw all the ether that is stored in the contract
 
-![Withdraw](./image/withdraw.png)
+```solidity
+function withdrawTips() public {
+  require(owner.send(address(this).balance));
+}
+```
 
 - Allows anyone to retrieve all the memos stored in the contract.
 
-![GetMemos](./image/getMemos.png)
+```solidity
+function getMemos() public view returns (Memo[] memory) {
+  return memos;
+}
+```
 
 ## Structs
 
