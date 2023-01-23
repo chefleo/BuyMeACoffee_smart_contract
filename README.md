@@ -71,7 +71,71 @@ npx hardhat run scripts/deploy.js --network goerli
 npx hardhat console --network goerli
 ```
 
+- Verify the contract:
+
+```bash
+npx hardhat verify --network goerli <YOUR-CONTRACT-ADDRESS>
+```
+
+## Explanation BuyMeACoffee Smart Contract
+
+This smart contract allows users to send ether (ETH) to the contract, along with a `name` and `message`. The contract is named `BuyMeACoffee` and is written in the Solidity programming language for the Ethereum blockchain.
+
+## Features
+
+- Emits an event `NewMemo` when a user buys a coffee, which includes information about the transaction (from address, timestamp, name, and message)
+![Event](./image/event.png)
+![Function](./image/func_buycoffee.png)
+![Transaction](./image/Transaction_log.png)
+- Stores an array of `Memos` that are received from users
+![Array memos](./image/Arr_memos.png)
+- Has a variable `owner` that stores the address of the contract deployer
+![Owner](./image/owner.png)
+![Owner](./image/constructor.png)
+- Allows the `contract owner` to withdraw all the ether that is stored in the contract
+![Withdraw](./image/withdraw.png)
+- Allows anyone to retrieve all the memos stored in the contract.
+![GetMemos](./image/getMemos.png)
+
+## Structs
+
+- **Memo**:
+  - `from`: address of the user who sent the transaction
+  - `timestamp`: timestamp of the transaction
+  - `name`: name of the user who sent the transaction
+  - `message`: message sent by the user
+
+## Functions
+
+### buyCoffee
+
+This function allows a user to send ether to the contract and stores their name and message as a `Memo` in the contract.
+
+**Input**
+
+- _name: name of the user sending the transaction
+- _message: message sent by the user
+
+### withdrawTips
+
+This function allows the contract owner to withdraw all the ether that is stored in the contract.
+
+### getMemos
+
+This function allows anyone to retrieve all the memos stored in the contract.
+
+**Output**
+
+- Memo[] : array of memos stored in the contract
+
+## Deployment
+
+The address of the contract deployer is assigned to the `owner` variable upon deployment.
+
+## Note
+
+This smart contract is shared under `UNLICENSED license`. It is intended for educational and informational purposes only, and is not a recommendation or endorsement of any particular smart contract. Use caution when interacting with any smart contract, as they can be complex and potentially unsafe.
+
 ## The video where i studied
 
 [https://www.youtube.com/watch?v=cxxKdJk55Lk&list=PLMj8NvODurfEYLsuiClgikZBGDfhwdcXF&index=2&ab_channel=Alchemy](https://www.youtube.com/watch?v=cxxKdJk55Lk&list=PLMj8NvODurfEYLsuiClgikZBGDfhwdcXF&index=2&ab_channel=Alchemy)
-
