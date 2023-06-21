@@ -2,13 +2,13 @@
 
 ![presentation](./image/buymeacoffee.png)
 
-This is a decentralized application (DApp) built with [Hardhat](https://hardhat.org/) and [Solidity](https://solidity.readthedocs.io/). It is deployed on the [Goerli testnet](https://goerli.net/) and uses [Alchemy](https://alchemyapi.io/) as its node, as well as the Alchemy API for interacting with the Ethereum network.
+This is a decentralized application (DApp) built with [Hardhat](https://hardhat.org/) and [Solidity](https://solidity.readthedocs.io/). It is deployed on the [Sepolia testnet](https://sepolia.etherscan.io/) and uses [Alchemy](https://alchemyapi.io/) as its node, as well as the Alchemy API for interacting with the Ethereum network.
 
-[Demo Version (Work on Goerli testnet)](https://buymeacoffee-solidity-defi-tipping-app.chefleo.repl.co/)
+<!-- [Demo Version (Work on Goerli testnet)](https://buymeacoffee-solidity-defi-tipping-app.chefleo.repl.co/) -->
 
-[Front end code](https://replit.com/@chefleo/BuyMeACoffee-Solidity-DeFi-Tipping-app)
+[Front end code](https://github.com/chefleo/BuyMeACoffee_front_end)
 
-Contract Address -> [0x3eFb409C56306b82d2B59eef266B1067678f5CdA](https://goerli.etherscan.io/address/0x3eFb409C56306b82d2B59eef266B1067678f5CdA)
+<!-- Contract Address -> [0x3eFb409C56306b82d2B59eef266B1067678f5CdA](https://goerli.etherscan.io/address/0x3eFb409C56306b82d2B59eef266B1067678f5CdA) -->
 
 ## Prerequisites
 
@@ -46,8 +46,8 @@ To use this project, you need an Alchemy API key. You can get a key by signing u
 Once you have your API key, create a file called `.env` in the root of the project and add the following lines, replacing `YOUR_API_KEY` with your actual API key and `YOUR_GOERLI_URL` with the Goerli URL provided by Alchemy and `YOUR_PRIVATE_KEY` with the private key for your Metamask account:
 
 ```bash
-GOERLI_URL=YOUR_GOERLI_URL
-GOERLI_API_KEY=GOERLI_API_KEY
+SEPOLIA_URL=YOUR_SEPOLIA_URL
+SEPOLIA_API_KEY=SEPOLIA_API_KEY
 PRIVATE_KEY=PRIVATE_KEY
 ```
 
