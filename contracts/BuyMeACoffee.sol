@@ -2,6 +2,7 @@
 pragma solidity ^0.8.9;
 
 contract BuyMeACoffee {
+  error InsufficientFunds(uint256 msgValue);
   // Event to emit when the Memo is created
   event NewMemo(
     address indexed from,
@@ -37,7 +38,11 @@ contract BuyMeACoffee {
     string memory _name,
     string memory _message
   ) public payable {
-    require(msg.value > 0, "Can't buy coffee with 0 eth");
+    if(msg.value <= 0) {
+      revert InsufficientFunds({
+        msgValue: msg.value
+      });
+    }
 
     memos.push(Memo(msg.sender, block.timestamp, _name, _message));
 
